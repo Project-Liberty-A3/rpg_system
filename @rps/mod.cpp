@@ -1,0 +1,14 @@
+ name 			= "RP System"; // Name of your mod
+ author 		= "Silence, Hierophant"; // Affects Arma 3 Launcher, when the mod are loaded as local
+ logo 			= "\rps_common\logo_ca.paa"; // Logo displayed in the main menu
+ logoOver 	    = "\rps_common\logo_ca.paa"; // When the mouse is over, in the main menu
+ tooltip 		= "RP System";
+ tooltipOwned   = "Silence, Hierophant"; // Tool tip displayed when the mouse is left over, in the main menu
+ picture 		= "\rps_common\logo_ca.paa"; // Picture displayed from the expansions menu. Optimal size is 2048x1024
+ actionName     = "Discord Link";
+ action 		= ""; // Website URL, that can be accessed from the expansions menu
+ overview 		= ""; // Supports structured text
+ hideName 		= 0; // Hide the extension name
+ hidePicture	= 0;	// Hide the extension menu
+ dlcColor[] 	= {0.23,0.39,0.30,1}; // Color used for DLC stripes and backgrounds (RGBA)
+ logoSmall 		= "\rps_common\logo_ca.paa"; // Display in creative lists, next to the entities added by the mod
