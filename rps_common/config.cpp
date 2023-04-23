@@ -18,6 +18,8 @@ class CfgPatches
 	};
 };
 
+#include "cfgEventHandlers.hpp"
+
 class CfgFunctions 
 {
 	
