@@ -20,6 +20,11 @@ class CfgPatches
 
 #include "cfgEventHandlers.hpp"
 
+class zen_context_menu_actions
+{ // shouldn't matter if zen is loaded or not
+	#include "cfgZEN.hpp"
+};
+
 class CfgFunctions 
 {
 	

@@ -72,7 +72,7 @@ class cfgVehicles
 					displayName = "Roll Dice";
 					condition = "alive _player";
 					// exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
-					statement = "[_player] call rps_fnc_dice_roll";
+					statement = "[_player, 0] call rps_fnc_dice_roll";
 					showDisabled = 0;
 					icon = "rps_functions\ui\dice_ca.paa";
 				};

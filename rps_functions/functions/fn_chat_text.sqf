@@ -12,7 +12,7 @@
 	[ player, "I sent this message from fn_chat_text!", 5 ] call rps_fnc_chat_text;
 */
 
-params ["_unit", "_message", "_timer"];
+params ["_unit", "_message", ["_timer", 5]];
 
 private _draw_EH = addMissionEventHandler ["Draw3D",
 {

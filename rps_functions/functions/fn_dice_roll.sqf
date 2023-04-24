@@ -5,13 +5,18 @@
 
     Arguments:
     _unit		<OBJECT>
-	_rollAmount	<INTEGER> <DEFAULT: 20>
+	// _rollAmount	<INTEGER> <DEFAULT: 20>
 	
 	Example:
-	[ player, 5 ] call rps_fnc_dice_roll;
+	[ player ] call rps_fnc_dice_roll;
 */
 
-params ["_unit", ["_rollAmount", 20]];
+params ["_unit", ["_rollAmount", 0]];
+
+// private _roll = random _rollAmount;
+if (_rollAmount isEqualTo 0) then {
+	_rollAmount = missionNamespace getVariable ["rps_setting_dice_maxNumber", 20];
+};
 
 private _roll = random _rollAmount;
 
