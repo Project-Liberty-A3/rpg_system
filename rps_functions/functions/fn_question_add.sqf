@@ -15,7 +15,7 @@
 	[cursorObject, "Any information?", "", "", "No, I haven't seen anything."] call rps_fnc_question_add;
 */
 
-params ["_unit", "_actionName", "_icon", "_voice", "_text"];
+params ["_unit", "_actionName", "_icon", "_voice", "_text", ["_requiredCharisma", 0]];
 
 private _actions = _unit getVariable ["rps_actionAmount", 0];
 
@@ -27,17 +27,23 @@ private _actionInfo = [
 	{
 		params ["_target", "_player", "_params"];
 
+		private _charisma = _player getVariable ["rps_charisma", 0];
+
+		if !(_charisma >= _requiredCharisma) exitWith {hint "You don't have enough charisma to talk to this person!"};
+
         [_target, (_params select 1), 10] remoteExec ["rps_fnc_chat_text"];
 
 		if !((_params select 0) isEqualTo "") then {
-			[{[(_this select 0), (_this select 1), true] call rps_fnc_chat_voice}, [_target, (_params select 0)], 0.1] call CBA_fnc_waitAndExecute;
+			[{
+				[(_this select 0), (_this select 1), true] call rps_fnc_chat_voice;
+			}, [_target, (_params select 0)], 0.1] call CBA_fnc_waitAndExecute;
 		};
         
         private _actions = _target getVariable ["rps_actionAmount", 0];
         _target setVariable ["rps_actionAmount", (_actions + 1)];
 	},
 	// Condition <CODE>
-	{ 
+	{
 		params ["_target", "_player", "_params"];
 
 		(alive _target)

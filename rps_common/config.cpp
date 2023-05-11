@@ -25,6 +25,11 @@ class zen_context_menu_actions
 	#include "cfgZEN.hpp"
 };
 
+class CfgWeapons
+{
+	#include "cfgItems.hpp"
+};
+
 class CfgFunctions 
 {
 	

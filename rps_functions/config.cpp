@@ -27,6 +27,11 @@ class CfgFunctions
         class functions 
         {
 			
+            class canShowIncense
+            {
+                file = "\rps_functions\functions\fn_canShowIncense.sqf";
+            };
+
             class chat_init
             {
                 file = "\rps_functions\functions\fn_chat_init.sqf";
@@ -45,6 +50,21 @@ class CfgFunctions
             class dice_roll 
             {
                 file = "\rps_functions\functions\fn_dice_roll.sqf";
+            };
+			
+            class hasACE 
+            {
+                file = "\rps_functions\functions\fn_hasACE.sqf";
+            };
+
+            class incense_heal
+            {
+                file = "\rps_functions\functions\fn_incense_heal.sqf";
+            };
+
+            class incense 
+            {
+                file = "\rps_functions\functions\fn_incense.sqf";
             };
 			
             class question_add 
@@ -73,6 +93,15 @@ class cfgVehicles
 					condition = "alive _player";
 					// exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
 					statement = "[_player, 0] call rps_fnc_dice_roll";
+					showDisabled = 0;
+					icon = "rps_functions\ui\dice_ca.paa";
+				};
+				class rps_consume_incense
+				{
+					displayName = "Use Incense";
+					condition = """rps_item_incense"" in items _player && {call rps_fnc_canShowIncense}";
+					// exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
+					statement = "[_player] spawn rps_fnc_incense";
 					showDisabled = 0;
 					icon = "rps_functions\ui\dice_ca.paa";
 				};

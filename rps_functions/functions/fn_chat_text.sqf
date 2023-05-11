@@ -14,6 +14,8 @@
 
 params ["_unit", "_message", ["_timer", 5]];
 
+if (_unit getVariable ["rps_chat_active", false] isEqualTo true) exitWith {};
+
 private _draw_EH = addMissionEventHandler ["Draw3D",
 {
 	drawIcon3D
@@ -28,7 +30,7 @@ private _draw_EH = addMissionEventHandler ["Draw3D",
 		0.035,
 		"RobotoCondensedBold"
 	];
-	// drawLine3D 
+	// drawLine3D
 	// [
 	//	 getPos player,
 	//	 getPos _x,
