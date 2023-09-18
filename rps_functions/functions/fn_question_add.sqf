@@ -1,6 +1,5 @@
-
 /*
-	Purpose: Selects random number from 0 to _rollAmount, puts result in systemChat
+	Purpose: Adds a question to AI based on params
 
 	Made by: Silence
 

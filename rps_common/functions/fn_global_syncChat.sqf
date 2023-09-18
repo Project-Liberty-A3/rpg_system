@@ -14,7 +14,7 @@
 params ["_message", ["_global", true]];
 
 if (_global) exitWith {
-    [_message] remoteExec ["systemChat"];
+    [_message] remoteExec ["systemChat", 0];
 };
 
 systemChat _message;

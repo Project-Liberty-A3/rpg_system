@@ -37,6 +37,11 @@ class CfgFunctions
                 file = "\rps_functions\functions\fn_chat_init.sqf";
             };
 
+            class chat_text_gm
+            {
+                file = "\rps_functions\functions\fn_chat_text_gm.sqf";
+            };
+
             class chat_text 
             {
                 file = "\rps_functions\functions\fn_chat_text.sqf";
@@ -45,6 +50,11 @@ class CfgFunctions
             class chat_voice
             {
                 file = "\rps_functions\functions\fn_chat_voice.sqf";
+            };
+
+            class customRadioChannel
+            {
+                file = "\rps_functions\functions\fn_customRadioChannel.sqf";
             };
 
             class dice_roll 
@@ -67,6 +77,11 @@ class CfgFunctions
                 file = "\rps_functions\functions\fn_incense.sqf";
             };
 			
+            class init 
+            {
+                file = "\rps_functions\functions\fn_init.sqf";
+            };
+
             class question_add 
             {
                 file = "\rps_functions\functions\fn_question_add.sqf";
@@ -135,9 +150,13 @@ class Extended_InitPost_EventHandlers
 {
     class CAManBase 
 	{
-		class rps_chat_init 
+		class rps_chat_init
 		{
 			init = "call rps_fnc_chat_init";
+		};
+		class rps_init
+		{
+			init = "call rps_fnc_init";
 		};
     };
 };
