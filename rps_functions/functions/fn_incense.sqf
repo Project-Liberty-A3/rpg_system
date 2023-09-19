@@ -16,7 +16,7 @@ private _particleSource = "#particlesource" createVehicle ASLToAGL getPosASL _un
 
 _particleSource setParticleClass "MineCircleDust";
 
-_particleSource setDropInterval 0.04;
+[_particleSource, 0.04] remoteExec ["setDropInterval", 0];
 
 uiSleep 5;
 

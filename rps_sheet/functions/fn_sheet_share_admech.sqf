@@ -8,7 +8,10 @@ private _stamina        = _target getVariable ["rps_setting_sheet_admech_stamina
 private _charisma       = _target getVariable ["rps_setting_sheet_admech_charisma", 0];
 private _class          = _target getVariable ["rps_setting_sheet_admech_class", "No class."];
 private _background     = _target getVariable ["rps_setting_sheet_admech_background", "No history."];
-private _equipment      = _target getVariable ["rps_setting_sheet_admech_equipment", "No equipment."];
+private _weapon         = _target getVariable ["rps_setting_sheet_admech_weapon", "No weapon."];
+private _armor          = _target getVariable ["rps_setting_sheet_admech_armor", "No armor."];
+private _relic          = _target getVariable ["rps_setting_sheet_admech_relic", "No relic."];
+private _seals          = _target getVariable ["rps_setting_sheet_admech_seals", "No seals."];
 
 if ("href" in _class) then {_class = "No class."};
 if ("href" in _background) then {_background = "No background."};
@@ -28,7 +31,7 @@ switch (_index) do
     };
     case "3": 
     {
-        _data = [_points, _name, _equipment];
+        _data = [_points, _name, _weapon, _armor, _relic, _seals];
     };
 };
 

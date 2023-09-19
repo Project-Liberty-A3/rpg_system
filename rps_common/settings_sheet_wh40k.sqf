@@ -20,7 +20,7 @@
     false, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
-		ACE_player setVariable ["rps_setting_sheet_admech_strength",_value,true];
+		ACE_player setVariable ["rps_setting_sheet_admech_strength",round(_value),true];
     }
 ] call CBA_fnc_addSetting;
 
@@ -33,7 +33,7 @@
     false, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
-		ACE_player setVariable ["rps_setting_sheet_admech_intelligence",_value,true];
+		ACE_player setVariable ["rps_setting_sheet_admech_intelligence",round(_value),true];
     }
 ] call CBA_fnc_addSetting;
 
@@ -46,7 +46,7 @@
     false, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
-		ACE_player setVariable ["rps_setting_sheet_admech_stamina",_value,true];
+		ACE_player setVariable ["rps_setting_sheet_admech_stamina",round(_value),true];
     }
 ] call CBA_fnc_addSetting;
 
@@ -59,7 +59,7 @@
     false, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
-		ACE_player setVariable ["rps_setting_sheet_admech_charisma",_value,true];
+		ACE_player setVariable ["rps_setting_sheet_admech_charisma",round(_value),true];
     }
 ] call CBA_fnc_addSetting;
 
@@ -90,14 +90,53 @@
 ] call CBA_fnc_addSetting;
 
 [
-    "rps_setting_sheet_admech_equipment", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+    "rps_setting_sheet_admech_weapon", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
     "EDITBOX", // setting type
-    "Equipment", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+    "Weapon", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     ["RP System (Character Sheet)", "WH40k"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    "No Equipment",
+    "No weapon.",
     false, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
     {
         params ["_value"];
-		ACE_player setVariable ["rps_setting_sheet_admech_equipment",_value,true];
+		ACE_player setVariable ["rps_setting_sheet_admech_weapon",_value,true];
+    }
+] call CBA_fnc_addSetting;
+
+[
+    "rps_setting_sheet_admech_armor", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+    "EDITBOX", // setting type
+    "Armor", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+    ["RP System (Character Sheet)", "WH40k"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+    "No armor.",
+    false, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
+    {
+        params ["_value"];
+		ACE_player setVariable ["rps_setting_sheet_admech_armor",_value,true];
+    }
+] call CBA_fnc_addSetting;
+
+[
+    "rps_setting_sheet_admech_relic", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+    "EDITBOX", // setting type
+    "Relic", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+    ["RP System (Character Sheet)", "WH40k"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+    "No relic.",
+    false, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
+    {
+        params ["_value"];
+		ACE_player setVariable ["rps_setting_sheet_admech_relic",_value,true];
+    }
+] call CBA_fnc_addSetting;
+
+[
+    "rps_setting_sheet_admech_seals", // Internal setting name, should always contain a tag! This will be the global variable which takes the value of the setting.
+    "SLIDER", // setting type
+    "Seals", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
+    ["RP System (Character Sheet)", "WH40k"], // Pretty name of the category where the setting can be found. Can be stringtable entry.
+    [0, 100, 0, 0],
+    false, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
+    {
+        params ["_value"];
+		ACE_player setVariable ["rps_setting_sheet_admech_seals",round(_value),true];
     }
 ] call CBA_fnc_addSetting;
