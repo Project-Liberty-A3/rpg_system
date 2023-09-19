@@ -46,8 +46,8 @@ class cfgVehicles
 
 	class rps_incense : rps_incense_base
 	{
-		scope = 1;
-		scopeCurator = 1;
+		scope = 2;
+		scopeCurator = 2;
 		model = "rps_props\incense\incense";
 		displayName = "Incense";
 	};

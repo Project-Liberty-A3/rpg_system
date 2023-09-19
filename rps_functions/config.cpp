@@ -86,6 +86,11 @@ class CfgFunctions
             {
                 file = "\rps_functions\functions\fn_question_add.sqf";
             };
+
+            class rp_incense 
+            {
+                file = "\rps_functions\functions\fn_rp_incense.sqf";
+            };
 			
         };
 		
@@ -113,10 +118,19 @@ class cfgVehicles
 				};
 				class rps_consume_incense
 				{
-					displayName = "Use Incense";
-					condition = """rps_item_incense"" in items _player && {call rps_fnc_canShowIncense}";
+					displayName = "Use Healing Incense";
+					condition = """rps_item_incense_heal"" in items _player && {call rps_fnc_canShowIncense}";
 					// exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
 					statement = "[_player] spawn rps_fnc_incense";
+					showDisabled = 0;
+					icon = "rps_functions\ui\dice_ca.paa";
+				};
+				class rps_place_incense
+				{
+					displayName = "Place Incense";
+					condition = """rps_item_incense"" in items _player && {call rps_fnc_canShowIncense}";
+					// exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
+					statement = "[_player] spawn rps_fnc_rp_incense";
 					showDisabled = 0;
 					icon = "rps_functions\ui\dice_ca.paa";
 				};

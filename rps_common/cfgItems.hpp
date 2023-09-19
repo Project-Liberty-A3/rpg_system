@@ -16,3 +16,7 @@
 			type = 302;
 		};
 	};
+	class rps_item_incense_heal: rps_item_incense
+	{
+		displayName = "Healing Incense";
+	};

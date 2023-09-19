@@ -54,4 +54,4 @@ if (_healGroup) then {
 
 };
 
-_unit removeItem "rps_item_incense";
+_unit removeItem "rps_item_incense_heal";
