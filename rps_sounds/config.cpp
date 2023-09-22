@@ -28,4 +28,11 @@ class CfgSounds
 		sound[] = {"\rps_sounds\sounds\prayer.ogg", 1, 1.0, 1};
 		titles[] = {0, ""};
 	};
+	class rps_sound_admech_music
+	{
+		name = "rps_sound_admech_music";
+		maxDistance = 50;
+		sound[] = {"\rps_sounds\sounds\admech_music.ogg", 2, 1.0, 1};
+		titles[] = {0, ""};
+	};
 };

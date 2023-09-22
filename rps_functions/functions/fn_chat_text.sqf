@@ -23,7 +23,7 @@ private _draw_EH = addMissionEventHandler ["Draw3D",
 		"", // add actual icon
 		//"a3\ui_f\data\Map\Markers\Military\dot_ca.paa",
 		[[1,0,0,1], [1,1,1,1]],
-		((_thisArgs select 0) modelToWorldVisual [0.05,0.1,2]),
+		(visiblePosition (_thisArgs select 0) vectorAdd [0.05,0.1,2]),
 		1,1,0,
 		(_thisArgs select 1), // message
 		0,

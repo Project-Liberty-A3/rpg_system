@@ -8,10 +8,10 @@ private _level = (_display select 3);
 
 private _points         = _unit getVariable ["rps_stat_playerPoints", 0];
 private _name           = _unit getVariable ["rps_setting_sheet_name", (name _unit)];
-private _strength       = _unit getVariable ["rps_setting_sheet_admech_strength", 0];
-private _intelligence   = _unit getVariable ["rps_setting_sheet_admech_intelligence", 0];
-private _stamina        = _unit getVariable ["rps_setting_sheet_admech_stamina", 0];
-private _charisma       = _unit getVariable ["rps_setting_sheet_admech_charisma", 0];
+private _strength       = _unit getVariable ["rps_setting_sheet_admech_strength", (round (random 5))];
+private _intelligence   = _unit getVariable ["rps_setting_sheet_admech_intelligence", (round (random 5))];
+private _stamina        = _unit getVariable ["rps_setting_sheet_admech_stamina", (round (random 5))];
+private _charisma       = _unit getVariable ["rps_setting_sheet_admech_charisma", (round (random 5))];
 
 diag_log _data;
 

@@ -11,7 +11,7 @@ private _name       = _unit getVariable ["rps_setting_sheet_name", (name _unit)]
 private _weapon     = _unit getVariable ["rps_setting_sheet_admech_weapon", "No weapon."];
 private _armor      = _unit getVariable ["rps_setting_sheet_admech_armor", "No armor."];
 private _relic      = _unit getVariable ["rps_setting_sheet_admech_relic", "No relic."];
-private _seals      = _unit getVariable ["rps_setting_sheet_admech_seals", "No seals."];
+private _seals      = _unit getVariable ["rps_setting_sheet_admech_seals", (round (random 100))];
 
 diag_log _data;
 
