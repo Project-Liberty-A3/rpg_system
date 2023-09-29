@@ -8,7 +8,7 @@ private _level = (_display select 3);
 
 private _points     = _unit getVariable ["rps_stat_playerPoints", 0];
 private _name       = _unit getVariable ["rps_setting_sheet_name", (name _unit)];
-private _class      = _unit getVariable ["rps_setting_sheet_admech_class", "No class."];
+private _class      = _unit getVariable ["rps_setting_sheet_admech_class", (getText (configFile >> "CfgVehicles" >> typeOf _unit >> "displayName"))];
 private _background = _unit getVariable ["rps_setting_sheet_admech_background", "No history."];
 
 diag_log _data;

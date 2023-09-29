@@ -23,8 +23,10 @@ private _handler = addMissionEventHandler ["HandleChatMessage",
         };
         case ("/gm" in _text): 
         {
-            if (!isNull (getAssignedCuratorLogic _person) && {_person getVariable ["rps_chat_active", false] isEqualTo false}) then { // check if player is zeus
-                if (_person distance player <= 20) then {
+            if (!isNull (getAssignedCuratorLogic _person) && {_person getVariable ["rps_chat_active", false] isEqualTo false}) then 
+            { // check if player is zeus
+                if (_person distance player <= 8) then 
+                {
                     private _textTrimmed = _text select [4]; // cut out the /gm text
                     [_person, _textTrimmed, 10] call rps_fnc_chat_text_gm;
 

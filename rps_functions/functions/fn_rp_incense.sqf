@@ -4,9 +4,9 @@ if (_unit getVariable ["rps_incense_placed", false] isEqualTo true) exitWith {};
 
 _unit removeItem "rps_item_incense";
 
-[_unit, "Acts_JetsCrewaidFCrouch_in"] remoteExec ["switchMove"];
+// [_unit, "Acts_JetsCrewaidFCrouch_in"] remoteExec ["switchMove"];
 
-uiSleep 3;
+// uiSleep 3;
 
 private _incense = "rps_incense" createVehicle [0,0,0];
 
@@ -18,7 +18,7 @@ _particleSource setParticleClass "MineCircleDust";
 
 [_particleSource, 0.07] remoteExec ["setDropInterval", 0];
 
-[_unit, ""] remoteExec ["switchMove"];
+// [_unit, ""] remoteExec ["switchMove"];
 
 _action = ["PickupIncense","Retrieve Incense","",{
 	params ["_target", "_player", "_params"];
