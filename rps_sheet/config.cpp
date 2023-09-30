@@ -113,7 +113,7 @@ class cfgVehicles
 					displayName = "Character Page 1";
 					condition = "alive _player";
 					// exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
-					statement = "[_player, ""1""] call rps_fnc_openDialog_admech";
+					statement = "[_player, ""1""] spawn rps_fnc_openDialog_admech";
 					showDisabled = 0;
 					icon = "rps_functions\ui\dice_ca.paa";
 				};
@@ -122,7 +122,7 @@ class cfgVehicles
 					displayName = "Character Page 2";
 					condition = "alive _player";
 					// exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
-					statement = "[_player, ""2""] call rps_fnc_openDialog_admech";
+					statement = "[_player, ""2""] spawn rps_fnc_openDialog_admech";
 					showDisabled = 0;
 					icon = "rps_functions\ui\dice_ca.paa";
 				};
@@ -131,7 +131,7 @@ class cfgVehicles
 					displayName = "Character Page 3";
 					condition = "alive _player";
 					// exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
-					statement = "[_player, ""3""] call rps_fnc_openDialog_admech";
+					statement = "[_player, ""3""] spawn rps_fnc_openDialog_admech";
 					showDisabled = 0;
 					icon = "rps_functions\ui\dice_ca.paa";
 				};
@@ -152,7 +152,7 @@ class cfgVehicles
 				class rps_admech_character_sheet
 				{
 					displayName = "Character Pages";
-					condition = "alive _player && {missionNamespace getVariable [""rps_setting_sheet_enable"",false] isEqualTo true}";
+					condition = "alive _player && call rps_fnc_sheet_canShare && {missionNamespace getVariable [""rps_setting_sheet_enable"",false] isEqualTo true}";
 					// exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
 					showDisabled = 0;
 					icon = "rps_functions\ui\dice_ca.paa";

@@ -35,4 +35,4 @@ switch (_index) do
     };
 };
 
-[_unit, _index, _data] call rps_fnc_openDialog_admech;
+[_unit, _index, _data] spawn rps_fnc_openDialog_admech;
